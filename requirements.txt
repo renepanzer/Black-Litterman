@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+scikit-learn>=1.4
+cvxpy>=1.4
+yfinance>=0.2
+openpyxl>=3.1
