@@ -29,7 +29,7 @@ The code does the following:
 
 1. Download four years of daily prices for the 25 asset universe using yfinance.
 2. Estimate the Ledoit-Wolf shrunk covariance matrix and annualise it.
-3. Reverse-optimise the weights to get implied excess returns `pi = risk_aversion * Sigma * w`. Equal weights are used in place of market capitalisation weights, so `pi reflects each asset's covariance with the equal-weighted universe rather than with the market portfolio.
+3. Reverse-optimise the weights to get implied excess returns `pi = risk_aversion * Sigma * w`. Equal weights are used in place of market capitalisation weights, so `pi` reflects each asset's covariance with the equal-weighted universe rather than with the market portfolio.
 4. Build the view matrix `P`, the view vector `Q` and the view uncertainty `Omega`. Views are absolute one-year return forecasts, taken from median analyst estimates and converted to excess returns over a fixed risk-free rate. `Omega` is set proportional to the prior variance.
 5. Combine prior and views into the posterior mean and covariance.
 6. Maximise `mu'w - 0.5 * risk_aversion * w'Sigma w` subject to the constraints, using the OSQP solver.
